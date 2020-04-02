@@ -14,6 +14,7 @@ export class FirstComponent extends React.Component<any/**props Interfase */,  a
         this.state = 
         {
           // dan2:""
+          // test
         }
 
 
