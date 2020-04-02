@@ -6,6 +6,9 @@ interface ISimpleInterfase   // use  it for state --> second insertation
   dan2: any;
 }
 
+
+//Hello world!!! 
+
 export class FirstComponent extends React.Component<any/**props Interfase */,  any /**state interfase */>{
  
   constructor(props: any)  // between component variable
