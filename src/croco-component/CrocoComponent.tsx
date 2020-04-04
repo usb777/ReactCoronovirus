@@ -29,8 +29,8 @@ constructor (props: any)   // Default state values
   {
 
     axios.get(`https://jsonplaceholder.typicode.com/users`)   // Get - request - ZAPROS
-    .then(response => response.data)
-    .then((data) => 
+    .then(response => response.data) //Promise
+    .then((data) => //Object
      {
    
        this.setState({ users: data })

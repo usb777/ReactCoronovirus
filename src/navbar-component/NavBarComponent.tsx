@@ -31,7 +31,10 @@ const NavBarComponent = (props:any) => {
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/">Menu</NavbarBrand>
         <Link to="/"> homepage</Link>    &nbsp;   
-        <Link to="/first-project"> first</Link>
+        <Link to="/first-project"> first</Link> &nbsp;
+        <Link to="/croco"> all users </Link>&nbsp;
+        <Link to="/allusers-redux"> all users Redux </Link>&nbsp;
+       
         &nbsp;
               <Nav className="mr-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
@@ -40,9 +43,26 @@ const NavBarComponent = (props:any) => {
               </DropdownToggle>
               <DropdownMenu right>
 
-                  <DropdownItem>
-                  <Link to='/reimbursements'>Reimbursements</Link>
+              <DropdownItem>
+              <Link to="/"> homepage</Link>
+              </DropdownItem>
+
+                <DropdownItem>
+                <Link to="/first-project"> first</Link>
+               </DropdownItem> 
+
+               <DropdownItem>
+                 <Link to="/dan-project"> second </Link>
                 </DropdownItem> 
+
+                <DropdownItem>
+                    <Link to="/allusers"> all users</Link>
+               </DropdownItem> 
+
+                    <DropdownItem>
+                        <Link to="/croco"> croco </Link>
+                        </DropdownItem> 
+                 
 
                 <DropdownItem divider />
                 <DropdownItem>
