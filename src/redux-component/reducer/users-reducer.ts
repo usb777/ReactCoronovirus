@@ -15,7 +15,7 @@ export const usersReducer = (state = initialState, action:AnyAction ) =>
     {
         case usersTypes.GET_ALL_USERS:{   // Good
             return {
-                ...state,
+                ...state, // spread Operator
                 allUsers:action.payload.usersArray
             }
         }  

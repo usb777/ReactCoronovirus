@@ -14,6 +14,7 @@ export const getAllUsersActionMapper = () => async (dispatch:Dispatch) => {
     // try to get all users from a remote function
     try{
         let usersArray = await getAllUsers() // await - asyncronys function
+       // console.log(usersArray);
         //if we do call dispatch with those users
         dispatch({
             type: usersTypes.GET_ALL_USERS,
