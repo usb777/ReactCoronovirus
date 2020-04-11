@@ -9,23 +9,21 @@ import {Link} from 'react-router-dom'
 import NavBarComponent  from './navbar-component/NavBarComponent'
 import {UsersComponent} from './usersAll-component/UsersComponent'
 import {CrocodileComponent} from './croco-component/CrocoComponent'
-import {ViewAllUsersComponent}  from './redux-component/viewallusers-component/ViewAllUsersComponent'
-
+import ViewAllUsersComponent  from './redux-component/viewallusers-component/ViewAllUsersContainer'
+import UsersByIdComponent from './redux-component/userbyid-component/FindUserByIdContainer'
 /*  Redux Part    */
 import { Provider } from 'react-redux';
 import { store } from './Store';
 
 function App() {
 
-  let x =0;
-
-
+ 
   return (
     <div >
       
           
 
-      <Provider store={store}>
+      <Provider store={store}>  
       <Router>
        <NavBarComponent />
        
@@ -37,9 +35,11 @@ function App() {
       <Route path='/allusers'   render={() => <UsersComponent  />}       />
      
       <Route path='/allusers-redux' component={ViewAllUsersComponent} />
+     
       <Route path='/croco'   render={() => <CrocodileComponent  />}       />
+      
+      <Route exact path="/user/:uId" render={props => <UsersByIdComponent {...props.match.params} />} />
     
-      CrocodileComponent
        </Switch>
 
       </Router>

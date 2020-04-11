@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserRedux } from '../../model/UserRedux';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom' // <a href = '' >
 /*
 import { CardDeck } from '../general-components/card-deck-component/CardDeckComponent';
 import { UserInfoComponent } from '../user-info/UserInfoComponent';
@@ -21,35 +21,35 @@ export class ViewAllUsersComponent extends React.Component<IViewAllUsersProps,an
     // runs when component starts to exist
     componentDidMount(){
         // check to see if we already have users (redux store)
-        if(this.props.allUsers.length !== 0)
+        if(this.props.allUsers.length === 0)
         {
-            console.log('call getAll users mapper?');
-            
+                      
             this.props.getAllUsersActionMapper()
         }
            
-        else {
-            //they weren't admin so do nothing
-            //return
-        }
+        else {    }
     }
 
     render(){
        
-        let userDisplay = this.props.allUsers.map((person) => {
-            return (
+      //Start Typescript
+
+        let userDisplay = this.props.allUsers.map((person,index) => {
+            return (  
                 <tr>
                     <td>{person.id}</td>
                     <td>{person.email}</td>
                     <td>{person.name}</td>
                     <td>{person.username}</td>                    
-                    <td><Link to={{ pathname: `/user` }}>update</Link> </td>
-                   
+                   <td><Link to={{ pathname: `/user/${person.id}` }}>update</Link> </td>
+                
 
                 </tr>
             )
         })
 
+        // end Typescript
+      //  console.log(userDisplay);
         return(
 
 
